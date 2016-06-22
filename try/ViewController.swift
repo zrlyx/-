@@ -9,6 +9,35 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var one: UITextField!
+    
+    @IBOutlet weak var two: UITextField!
+    
+    
+    @IBOutlet weak var SC: UITextField!
+    @IBAction func add(sender: AnyObject) {
+        var temp=0.0
+        temp=(Double)(one.text!)!+(Double)(two.text!)!
+        SC.text="\(temp)"
+    }
+    @IBAction func minus(sender: AnyObject) {
+        var temp=0.0
+        temp=(Double)(one.text!)!-(Double)(two.text!)!
+        SC.text="\(temp)"
+    }
+    @IBAction func by(sender: AnyObject) {
+        var temp=0.0
+        temp=(Double)(one.text!)!*(Double)(two.text!)!
+        SC.text="\(temp)"
+    }
+    
+    @IBAction func into(sender: AnyObject) {
+        var temp=0.0
+        temp=(Double)(one.text!)!/(Double)(two.text!)!
+        SC.text="\(temp)"
+    }
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
